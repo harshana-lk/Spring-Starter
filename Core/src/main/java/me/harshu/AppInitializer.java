@@ -7,19 +7,22 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AppInitializer {
     public static void main(String[] args) {
 
-//        by this method we can run anything before shutdown the JVM
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("JVM is about to Shutdown");
-            }
-        }));
+//        by this method we can run anything before shutdown the JVM(Manual Method)==============
+//        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("JVM is about to Shutdown");
+//            }
+//        }));
 
 //        Creating Bean Factory (AnnotationConfigApplicationContext Object)
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 
 //        Introducing AnnotationConfigApplicationContext class to ApplicationContext
         context.register(AppConfig.class);
+
+//     by this method we can run anything before shutdown the JVM(Introduced by Spring)
+        context.registerShutdownHook();
 
 //        Refreshing AnnotationConfigApplicationContext Object
         context.refresh();
