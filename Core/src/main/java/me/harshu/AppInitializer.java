@@ -22,7 +22,7 @@ public class AppInitializer {
 //        Introducing AnnotationConfigApplicationContext class to ApplicationContext
         context.register(AppConfig.class);
 
-//     by this method we can run anything before shutdown the JVM(Introduced by Spring)
+//        by this method we can run anything before shutdown the JVM(Introduced by Spring)
         context.registerShutdownHook();
 
 //        Refreshing AnnotationConfigApplicationContext Object
