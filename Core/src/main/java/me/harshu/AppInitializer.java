@@ -19,7 +19,7 @@ public class AppInitializer {
 //        Check whether SpringBean is working
         SpringBean bean = context.getBean(SpringBean.class);
         bean.testBean();
-
+        System.out.println(bean);
 
         context.close();
     }
