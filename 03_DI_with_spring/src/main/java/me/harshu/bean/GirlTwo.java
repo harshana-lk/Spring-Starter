@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Primary
 public class GirlTwo implements GoodGirl {
     public GirlTwo() {
-        System.out.println("Girl Object Created");
+        System.out.println("Girl Two Object Created");
     }
 
     @Override

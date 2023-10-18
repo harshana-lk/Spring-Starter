@@ -11,10 +11,12 @@ public class AppInitializer {
         context.register(AppConfig.class);
         context.refresh();
         context.registerShutdownHook();
-        Boy boy = context.getBean(Boy.class);
-        GirlOne girlOne = context.getBean(GirlOne.class);
-        System.out.println(boy);
-        System.out.println(girlOne);
-        boy.chattingWithGirl();
+//        Boy boy = context.getBean(Boy.class);
+//        GirlOne girlOne = context.getBean(GirlOne.class);
+//        System.out.println(boy);
+//        System.out.println(girlOne);
+//        boy.chattingWithGirl();
+//        John bean = context.getBean(John.class);
+//        bean.chattingWithMerlin();
     }
 }
