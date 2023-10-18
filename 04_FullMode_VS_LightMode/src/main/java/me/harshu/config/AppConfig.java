@@ -11,11 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public SpringBeanOne getBeanOne(){
+    public SpringBeanOne getBeanOne(SpringBeanTwo beanTwo){
 //        Inter Bean Dependency
-        SpringBeanTwo bean = getBeanTwo();
-        SpringBeanTwo beanTwo = getBeanTwo();
-        System.out.println(bean);
         System.out.println(beanTwo);
 
 
