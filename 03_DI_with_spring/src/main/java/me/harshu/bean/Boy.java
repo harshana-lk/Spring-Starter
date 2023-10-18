@@ -14,7 +14,7 @@ public class Boy {
         System.out.println("Boy Object Created");
     }
 
-    public void chattingWithGirl() {;
+    public void chattingWithGirl() {
         girl.chatting();
     }
 }
