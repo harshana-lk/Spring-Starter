@@ -1,6 +1,5 @@
 package me.harshu;
 
-import me.harshu.bean.Girl;
 import me.harshu.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
