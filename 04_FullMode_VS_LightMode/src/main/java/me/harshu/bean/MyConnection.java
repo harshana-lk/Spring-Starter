@@ -5,33 +5,33 @@ import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class SpringBeanOne implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
-    public SpringBeanOne() {
-        System.out.println("Spring Bean One Object Created");
+public class MyConnection implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+    public MyConnection() {
+        System.out.println("MyConnection Bean Object Created");
     }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("SpringBeanOne Bean Factory Aware");
+        System.out.println("MyConnection Factory Bean Aware ");
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("SpringBeanOne Bean Name Aware");
+        System.out.println("MyConnection Bean Name Aware ");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("SpringBeanOne Bean Disposable Bean");
+        System.out.println("MyConnection Disposable Bean ");
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("SpringBeanOne Bean Initializing Bean Aware");
+        System.out.println("MyConnection Initializing Bean ");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println("SpringBeanOne Bean Application Context Aware");
+        System.out.println("MyConnection Application Context Aware ");
     }
 }

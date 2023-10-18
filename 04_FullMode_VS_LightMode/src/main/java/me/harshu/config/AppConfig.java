@@ -1,7 +1,7 @@
 package me.harshu.config;
 
-import me.harshu.bean.SpringBeanOne;
-import me.harshu.bean.SpringBeanTwo;
+import me.harshu.bean.MyBasicDataSource;
+import me.harshu.bean.MyConnection;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,16 +11,22 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public SpringBeanOne getBeanOne(SpringBeanTwo beanTwo){
-//        Inter Bean Dependency
-        System.out.println(beanTwo);
-
-
-        return new SpringBeanOne();
+    public MyBasicDataSource basicDataSource(){
+//        MyConnection myConnection = new MyConnection();
+//        Inter Bean Dependency Invocation
+        MyConnection myConnection1 = myConnection();
+        MyConnection myConnection2 = myConnection();
+        MyConnection myConnection3 = myConnection();
+        System.out.println(myConnection1);
+        System.out.println(myConnection2);
+        System.out.println(myConnection3);
+        MyBasicDataSource myBasicDataSource = new MyBasicDataSource();
+        myBasicDataSource.setConnection(myConnection1);
+        return myBasicDataSource;
     }
 
     @Bean
-    public SpringBeanTwo getBeanTwo(){
-        return new SpringBeanTwo();
+    public MyConnection myConnection(){
+        return new MyConnection();
     }
 }
