@@ -1,5 +1,7 @@
 package me.harshu;
 
+import me.harshu.bean.Boy;
+import me.harshu.bean.Girl;
 import me.harshu.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -9,5 +11,10 @@ public class AppInitializer {
         context.register(AppConfig.class);
         context.refresh();
         context.registerShutdownHook();
+        Boy boy = context.getBean(Boy.class);
+        Girl girl = context.getBean(Girl.class);
+        System.out.println(boy);
+        System.out.println(girl);
+        boy.chattingWithGirl();
     }
 }
