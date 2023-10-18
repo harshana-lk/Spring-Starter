@@ -3,12 +3,13 @@ package me.harshu.bean;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Girl {
-    public Girl() {
+public class GirlTwo implements GoodGirl {
+    public GirlTwo() {
         System.out.println("Girl Object Created");
     }
 
+    @Override
     public void chatting() {
-        System.out.println("Chatting Started");
+        System.out.println("Girl Two Chatting Started");
     }
 }

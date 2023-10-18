@@ -6,14 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Boy {
     @Autowired
-    Girl girl;
+    GoodGirl girl;
 
     public Boy() {
         System.out.println("Boy Object Created");
     }
 
-    public void chattingWithGirl() {
-        System.out.println("From Boy : "+this.girl);
+    public void chattingWithGirl() {;
         girl.chatting();
     }
 }
