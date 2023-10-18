@@ -3,23 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>me.harshu</groupId>
+        <artifactId>Spring-Starter</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
-    <groupId>me.harshu</groupId>
-    <artifactId>Spring-Starter</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>01_Core</module>
-        <module>02_SpringBeanLifeCycle</module>
-        <module>03_DI_with_spring</module>
-        <module>04_FullMode_VS_LightMode</module>
-    </modules>
+    <artifactId>04_FullMode_VS_LightMode</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring -->
@@ -41,7 +39,6 @@
             <artifactId>spring-context</artifactId>
             <version>6.0.12</version>
         </dependency>
-
     </dependencies>
 
 </project>
