@@ -12,6 +12,8 @@ public class SpringBeanOne implements InitializingBean {
     private String userName;
     @Value("${ijse.application.name}")
     private String projectName;
+    @Value("${my.name}")
+    private String myName;
     public SpringBeanOne() {
         System.out.println("SpringBeanOne Object Created");
     }

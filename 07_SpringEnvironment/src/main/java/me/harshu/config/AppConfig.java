@@ -7,5 +7,6 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan(basePackages = "me.harshu.bean")
 @PropertySource("classpath:application.properties")
+@PropertySource("classpath:configuration.properties")
 public class AppConfig {
 }
