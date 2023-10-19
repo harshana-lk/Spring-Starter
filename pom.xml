@@ -15,6 +15,7 @@
         <module>04_FullMode_VS_LightMode</module>
         <module>05_Configurations</module>
         <module>06_RuntimeValueInjection</module>
+        <module>SpringEnvironment</module>
     </modules>
 
     <properties>
