@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PathVariableController {
 
 //    When Path Variable name and the Parameter name are same
-    @GetMapping(path = "{itemCode}")//handler mapping
+    @GetMapping(path = "{itemCode:[a-z]{4}}")//handler mapping
     public String save(@PathVariable String itemCode){
         System.out.println("Hello Items");
         return "Item Code : "+itemCode ;
