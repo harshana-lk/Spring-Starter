@@ -17,6 +17,7 @@
         <module>06_RuntimeValueInjection</module>
         <module>07_SpringEnvironment</module>
         <module>08_Spring_MVC</module>
+        <module>09_Rest_Controllers</module>
     </modules>
 
     <properties>
