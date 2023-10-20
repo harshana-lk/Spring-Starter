@@ -14,9 +14,9 @@ public class CharacterMappingController {
         return "Hello Items";
     }
 
-//    @GetMapping(path = "")//handler mapping
-//    public String searchItems(){
-//        System.out.println("Search Items");
-//        return "Search Items";
-//    }
+    @GetMapping(path = "???/search")//handler mapping
+    public String searchItems(){
+        System.out.println("Search Items");
+        return "Search Items";
+    }
 }
